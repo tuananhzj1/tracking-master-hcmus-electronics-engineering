@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cài đặt HCMUS Master Tracker</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #1e293b;
+    background: #f8fafc;
+    line-height: 1.6;
+  }
+  h1 { color: #1e3a8a; font-size: 26px; margin-bottom: 8px; }
+  h2 { color: #1d4ed8; font-size: 18px; margin-top: 28px; }
+  .subtitle { color: #64748b; font-size: 14px; margin-bottom: 24px; }
+  .install-btn {
+    display: inline-block;
+    padding: 16px 28px;
+    background: #2563eb;
+    color: #fff !important;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: 0 6px 16px rgba(37,99,235,.35);
+    cursor: grab;
+    user-select: none;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .install-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(37,99,235,.45);
+  }
+  .install-btn:active { cursor: grabbing; transform: scale(.98); }
+  .steps {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin: 20px 0;
+  }
+  .steps ol { padding-left: 22px; margin: 8px 0; }
+  .steps li { margin: 8px 0; }
+  code {
+    background: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: "SF Mono", Consolas, monospace;
+  }
+  .warning {
+    background: #fef3c7;
+    border-left: 4px solid #eab308;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .info {
+    background: #dbeafe;
+    border-left: 4px solid #2563eb;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .center { text-align: center; margin: 32px 0; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+  }
+  a { color: #2563eb; }
+</style>
+</head>
+<body>
+
+<h1>🎓 Cài đặt HCMUS Master Tracker</h1>
+<p class="subtitle">Bookmarklet theo dõi tiến độ Thạc sĩ VTMT-K35 — Trường ĐH KHTN, ĐHQG-HCM</p>
+
+<div class="info">
+  💡 <b>Mẹo:</b> Hiện thanh bookmark trước khi kéo — nhấn <code>Ctrl+Shift+B</code> (Windows) hoặc <code>Cmd+Shift+B</code> (Mac).
+</div>
+
+<h2>Bước 1: Kéo nút dưới đây</h2>
+
+<div class="center">
+  <a class="install-btn" id="install-btn" href="#">📌 HCMUS Tracker</a>
+</div>
+
+<p style="text-align:center; color:#64748b; font-size:14px;">
+  ⬆️ Kéo nút này <b>thả vào thanh bookmark</b> của trình duyệt
+</p>
+
+<h2>Bước 2: Sử dụng</h2>
+
+<div class="steps">
+  <ol>
+    <li>Đăng nhập <a href="https://student.hcmus.edu.vn" target="_blank">student.hcmus.edu.vn</a></li>
+    <li>Mở trang <a href="https://student.hcmus.edu.vn/academic-results" target="_blank">Kết quả học tập</a> → nhấn bookmark <b>HCMUS Tracker</b></li>
+    <li>Mở trang <a href="https://student.hcmus.edu.vn/course-registration-result" target="_blank">Đăng ký học phần</a> → nhấn bookmark lần nữa</li>
+    <li>Xong! Hộp tracker hiện ra ở góc phải màn hình 🎉</li>
+  </ol>
+</div>
+
+<h2>❓ Kéo không được?</h2>
+
+<div class="warning">
+  <b>Nếu trình duyệt chặn kéo-thả</b>, làm theo cách thủ công:<br>
+  1. Mở file <a href="../master-tracking-hcmus">master-tracking-hcmus</a> trên GitHub<br>
+  2. Nhấn nút <b>Raw</b> → <code>Ctrl+A</code> → <code>Ctrl+C</code><br>
+  3. Chuột phải thanh bookmark → <b>Thêm trang</b><br>
+  4. Tên: <code>HCMUS Tracker</code> — URL: dán nội dung vừa copy<br>
+  5. Nhấn <b>Lưu</b>
+</div>
+
+<div class="warning">
+  ⚠️ Chrome/Edge có thể tự xóa tiền tố <code>javascript:</code> khi dán. Nếu bị, hãy <b>gõ tay <code>javascript:</code></b> trước rồi dán phần còn lại.
+</div>
+
+<h2>🌐 Trình duyệt hỗ trợ</h2>
+<p>✅ Chrome · Edge · Firefox · Safari · Cốc Cốc</p>
+
+<div class="footer">
+  <p>Bookmarklet chạy hoàn toàn trong trình duyệt — không gửi dữ liệu ra ngoài.</p>
+  <p><a href="https://github.com/tuananhzj1/tracking-master-hcmus-electronics-engineering">GitHub Repository</a></p>
+</div>
+
+<script>
+  // =====================================================================
+  // Nhúng bookmarklet ở dạng base64 để tránh bị strip bởi HTML sanitizer
+  // =====================================================================
+  // Để thay bookmarklet mới, chạy lệnh sau trong Console trình duyệt:
+  //   btoa("javascript:(function(){...})();")
+  // Rồi dán chuỗi base64 kết quả vào biến B64 bên dưới.
+  // =====================================================================
+
+  const B64 = "amF2YXNjcmlwdDooZnVuY3Rpb24oKXtjb25zdCBQVD17UFQxOntuYW1lOiJQVDEgLSBOZ2hpw6puIGPhu6l1Iix0b3RhbDo2MCx0cmlldDozLGJhdF9idW9jOjExLHR1X2Nob246MTYsbHVhbl92YW46MzB9LFBUMjp7bmFtZToiUFQyIC0g4buobmcgZOG7pW5nIChMVikiLHRvdGFsOjYyLHRyaWV0OjMsYmF0X2J1b2M6MTEsdHVfY2hvbjozNixsdWFuX3ZhbjoxMn0sUFQzOntuYW1lOiJQVDMgLSDhu6huZyBk4bulbmcgKMSQQSkiLHRvdGFsOjYyLHRyaWV0OjMsYmF0X2J1b2M6MTcsdHVfY2hvbjozNixkb19hbjo2fX07Y29uc3QgQz17Y2h1bmc6W3tjb2RlOiJNVFIiLG5hbWU6IlRyaeG6v3QgaOG7jWMiLGNyZWRpdHM6M31dLGJhdF9idW9jX1BUMTI6W3tjb2RlOiJNRFQwMzQiLG5hbWU6Iljhu60gbMO9IHTDrW4gaGnhu4d1IHPhu5EgbsOibmcgY2FvIixjcmVkaXRzOjR9LHtjb2RlOiJNRFQwMzUiLG5hbWU6IlRydXnhu4FuIHRow7RuZyB2w7QgdHV54bq/biBuw6JuZyBjYW8iLGNyZWRpdHM6NH0se2NvZGU6Ik1OQyIsbmFtZToiUGjGsMahbmcgcGjDoXAgbmdoacOqbiBj4bupdSBraG9hIGjhu41jIixjcmVkaXRzOjN9XSxiYXRfYnVvY19QVDM6W3tjb2RlOiJNRFQwMzQiLG5hbWU6Iljhu60gbMO9IHTDrW4gaGnhu4d1IHPhu5EgbsOibmcgY2FvIixjcmVkaXRzOjR9LHtjb2RlOiJNRFQwMzUiLG5hbWU6IlRydXnhu4FuIHRow7RuZyB2w7QgdHV54bq/biBuw6JuZyBjYW8iLGNyZWRpdHM6NH0se2NvZGU6Ik1OQyIsbmFtZToiUGjGsMahbmcgcGjDoXAgbmdoacOqbiBj4bupdSBraG9hIGjhu41jIixjcmVkaXRzOjN9LHtjb2RlOiJNRFQwNTUiLG5hbWU6IlRo4buxYyB04bqtcCB0aOG7sWMgdOG6vyIsY3JlZGl0czo2fV0sdHVfY2hvbjpbe2NvZGU6Ik1EVDA0NyIsbmFtZToiQ8OhYyBnaWFvIHRo4bupYyB0cnV54buBbiB0aMO0bmciLGNyZWRpdHM6NH0se2NvZGU6Ik1EVDAzNyIsbmFtZToiTeG6oW5nIHbDtCB0dXnhur9uIGjhu6NwIHTDoWMiLGNyZWRpdHM6NH0se2NvZGU6Ik1EVDAzOSIsbmFtZToiVGhp4bq/dCBr4bq/IHbDoCBs4bqtcCB0csOsbmggbmjDum5nIGNobyBJb1QiLGNyZWRpdHM6NH0se2NvZGU6Ik1EVDA0MCIsbmFtZToiQ8OhYyBnaWFvIHRo4bupYyBkw7luZyB0cm9uZyBJb1QiLGNyZWRpdHM6NH0se2NvZGU6Ik1EVDA1MSIsbmFtZToiTeG6oW5nIGPhuqNtIGJp4bq/biBraMO0bmcgZMOieSIsY3JlZGl0czo0fSx7Y29kZToiTURUMDQyIixuYW1lOiJY4butIGzDvSDhuqNuaCB2w6AgVmlkZW8iLGNyZWRpdHM6NH0se2NvZGU6Ik1EVDA0MyIsbmFtZToixJDDoW5oIGdpw6EgaGnhu4d1IG7Eg25nIG3huqFuZyIsY3JlZGl0czo0fSx7Y29kZToiTURUMDUyIixuYW1lOiJUaGnhur90IGvhur8gdsOgIHF1aSBob+G6oWNoIG3huqFuZyIsY3JlZGl0czo0fSx7Y29kZToiTURUMDUzIixuYW1lOiJBbiB0b8OgbiB2w6AgYuG6o28gbeG6rXQgdGjDtG5nIHRpbiIsY3JlZGl0czo0fSx7Y29kZToiTURUMDU0IixuYW1lOiJUcsOtIHR14buHIG5ow6JuIHThuqFvIixjcmVkaXRzOjR9LHtjb2RlOiJNRFQwNDYiLG5hbWU6IsSQ4buVaSBt4bubaSBzw6FuZyB04bqhbyIsY3JlZGl0czo0fSx7Y29kZToiTURUMDEzIixuYW1lOiJDaHV5w6puIMSR4buBIDEiLGNyZWRpdHM6NH0se2NvZGU6Ik1EVDAxNCIsbmFtZToiQ2h1ecOqbiDEkeG7gSAyIixjcmVkaXRzOjR9LHtjb2RlOiJNRFQwMTUiLG5hbWU6IkNodXnDqm4gxJHhu4EgMyIsY3JlZGl0czo0fV0sbHVhbl92YW46W3tjb2RlOiJNTFZfUFQxIixuYW1lOiJMdeG6rW4gdsSDbiB04buRdCBuZ2hp4buHcCAoUFQxKSIsY3JlZGl0czozMH0se2NvZGU6Ik1MVl9QVDIiLG5hbWU6Ikx14bqtbiB2xINuIHThu5F0IG5naGnhu4dwIChQVDIpIixjcmVkaXRzOjEyfSx7Y29kZToiTUxWX1BUMyIsbmFtZToixJDhu5Mgw6FuIHThu5F0IG5naGnhu4dwIChQVDMpIixjcmVkaXRzOjZ9XX07Y29uc3QgTk49e21pZW5fdmFuX2Jhbmc6e2xhYmVsOiJNaeG7hW4gbmdv4bqhaSBuZ+G7ryBxdWEgdsSDbiBi4bqxbmciLGRlc2M6IkLhurFuZyDEkEggdG/DoG4gdGjhu51pIGdpYW4g4bufIG7GsOG7m2Mgbmdvw6BpIC8gbmfDoG5oIG5nw7RuIG5n4buvIC8gY2jGsMahbmcgdHLDrG5oIGdp4bqjbmcgZOG6oXkgYuG6sW5nIG5nb+G6oWkgbmfhu68ifSxUT0VGTF9pQlQ6e2xhYmVsOiJUT0VGTCBpQlQiLHRocmVzaG9sZDo0Nix0eXBlOiJzaW5nbGUiLHVuaXQ6IsSRaeG7g20ifSxJRUxUUzp7bGFiZWw6IklFTFRTIix0aHJlc2hvbGQ6NS41LHR5cGU6InNpbmdsZSIsdW5pdDoiYmFuZCJ9LFRPRUlDOntsYWJlbDoiVE9FSUMgNCBr4bu5IG7Eg25nIix0eXBlOiJtdWx0aSIscGFydHM6W3trOiJuZ2hlIixsYWJlbDoiTmdoZSIsdGhyZXNob2xkOjQwMH0se2s6ImRvYyIsbGFiZWw6IsSQ4buNYyIsdGhyZXNob2xkOjM4NX0se2s6Im5vaSIsbGFiZWw6Ik7Ds2kiLHRocmVzaG9sZDoxNjB9LHtrOiJ2aWV0IixsYWJlbDoiVmnhur90Iix0aHJlc2hvbGQ6MTUwfV19LENhbWJyaWRnZTp7bGFiZWw6IkNhbWJyaWRnZSBCMiBGaXJzdCAvIExpbmd1YXNraWxsIix0aHJlc2hvbGQ6MTYwLHR5cGU6InNpbmdsZSIsdW5pdDoixJFp4buDbSJ9LEFwdGlzOntsYWJlbDoiQXB0aXMgRVNPTCBCMiIsdGhyZXNob2xkOm51bGwsdHlwZToiYjIiLG5vdGU6IlRyw6xuaCDEkeG7mSBCMiAoY2jhu6luZyBjaOG7iSB04burIDA0LzIwMjMpIn0sVlNURVA6e2xhYmVsOiJWU1RFUCBC4bqtYyA0IChCMikiLHRocmVzaG9sZDpudWxsLHR5cGU6ImIyIixub3RlOiJEbyBjxqEgc+G7nyBHRMSQSCDEkcaw4bujYyBC4buZIEdEJsSQVCBjw7RuZyBuaOG6rW4gY+G6pXAifSxUQ0Y6e2xhYmVsOiJUaeG6v25nIFBow6FwIC0gVENGIix0aHJlc2hvbGQ6NDAwLHR5cGU6InNpbmdsZSIsdW5pdDoixJFp4buDbSJ9LERFTEY6e2xhYmVsOiJUaeG6v25nIFBow6FwIC0gREVMRiBCMiIsdGhyZXNob2xkOm51bGwsdHlwZToiYjIifSxHb2V0aGU6e2xhYmVsOiJUaeG6v25nIMSQ4bupYyAtIEdvZXRoZSBCMiIsdGhyZXNob2xkOm51bGwsdHlwZToiYjIifSxUZXN0RGFGOntsYWJlbDoiVGnhur9uZyDEkOG7qWMgLSBUZXN0RGFGIFRETiA0Iix0aHJlc2hvbGQ6bnVsbCx0eXBlOiJiMiJ9LEhTSzp7bGFiZWw6IlRp4bq/bmcgVHJ1bmcgLSBIU0sgNCIsdGhyZXNob2xkOm51bGwsdHlwZToiYjIifSxKTFBUOntsYWJlbDoiVGnhur9uZyBOaOG6rXQgLSBKTFBUIE4zIix0aHJlc2hvbGQ6bnVsbCx0eXBlOiJiMiJ9LFRSS0k6e2xhYmVsOiJUaeG6v25nIE5nYSAtINCi0KDQmtCYLTIiLHRocmVzaG9sZDpudWxsLHR5cGU6ImIyIn0sVE9QSUs6e2xhYmVsOiJUaeG6v25nIEjDoG4gLSBUT1BJSyA0Iix0aHJlc2hvbGQ6bnVsbCx0eXBlOiJiMiJ9fTtjb25zdCBLRVk9aGNtdXNfbWFzdGVyX3RyYWNrZXJfdjI7bGV0IHN0b3JlPUpTT04ucGFyc2UobG9jYWxTdG9yYWdlLmdldEl0ZW0oS0VZKXx8e30pO3N0b3JlLnNjb3Jlcz1zdG9yZS5zY29yZXN8fHt9O3N0b3JlLm1hbnVhbD1zdG9yZS5tYW51YWx8fHt9O3N0b3JlLmluUHJvZ3Jlc3M9c3RvcmUuaW5Qcm9ncmVzc3x8e307c3RvcmUucHQ9c3RvcmUucHR8fFBUMTtzdG9yZS50YWI9c3RvcmUudGFifHxob2NwaGFuO3N0b3JlLm5nb2FpTmd1PXN0b3JlLm5nb2FpTmd1fHx7bWllbjpmYWxzZSxjZXJ0OklFTFRTLHNjb3JlOix0b2VpYzp7bmdoZTosZG9jOixub2k6LHZpZXQ6fSxleGFtRGF0ZTp9O2xldCB1cmw9bG9jYXRpb24uaHJlZjtpZih1cmwuaW5jbHVkZXMoYWNhZGVtaWMtcmVzdWx0cykpe2RvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwodGFibGU=";
+
+  document.getElementById('install-btn').href = atob(B64);
+</script>
+
+</body>
+</html>
