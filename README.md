@@ -40,7 +40,7 @@ Bookmarklet theo dõi tiến độ học tập Thạc sĩ ngành **Viễn thông
 - **Trạng thái tổng:** `✔ ĐẠT CHUẨN NGOẠI NGỮ` hoặc `✘ CHƯA ĐẠT`.
 
 ### 💾 Lưu trữ
-Tất cả dữ liệu (điểm, tick thủ công, môn đang học, phương thức, thông tin ngoại ngữ) được lưu vào `localStorage` với key `master-tracking-hcmus`, tồn tại trên toàn domain `student.hcmus.edu.vn`.
+Tất cả dữ liệu (điểm, tick thủ công, môn đang học, phương thức, thông tin ngoại ngữ) được lưu vào `localStorage` với key `hcmus_master_tracker_v2`, tồn tại trên toàn domain `student.hcmus.edu.vn`.
 
 ---
 
@@ -183,7 +183,7 @@ Cảnh báo nếu còn ≤ 180 ngày hoặc đã hết hạn.
 
 ### 2. Không thấy môn in-progress?
 - Phải chạy bookmarklet trên trang `/course-registration-result` ít nhất 1 lần.
-- Kiểm tra Console: `JSON.parse(localStorage.getItem('master-tracking-hcmus'))` xem `inProgress` có dữ liệu không.
+- Kiểm tra Console: `JSON.parse(localStorage.getItem('hcmus_master_tracker_v2'))` xem `inProgress` có dữ liệu không.
 
 ### 3. Môn đã có điểm nhưng vẫn hiện vàng?
 - Trong logic mới, **điểm luôn thắng in-progress**. Nếu vẫn vàng, có thể `store.scores` chưa có mã đó → chạy lại bookmarklet trên `/academic-results`.
@@ -191,7 +191,7 @@ Cảnh báo nếu còn ≤ 180 ngày hoặc đã hết hạn.
 ### 4. Muốn reset toàn bộ dữ liệu?
 Mở Console, chạy:
 ```javascript
-localStorage.removeItem('master-tracking-hcmus');
+localStorage.removeItem('hcmus_master_tracker_v2');
 ```
 Rồi chạy lại bookmarklet.
 
@@ -199,9 +199,9 @@ Rồi chạy lại bookmarklet.
 Có. Dữ liệu lưu trong `localStorage` của trình duyệt, **không đồng bộ** giữa các máy. Muốn chuyển, export/import thủ công qua Console:
 ```javascript
 // Export
-copy(localStorage.getItem('master-tracking-hcmus'));
+copy(localStorage.getItem('hcmus_master_tracker_v2'));
 // Import
-localStorage.setItem('master-tracking-hcmus', 'DÁN_CHUỖI_JSON_VÀO_ĐÂY');
+localStorage.setItem('hcmus_master_tracker_v2', 'DÁN_CHUỖI_JSON_VÀO_ĐÂY');
 ```
 
 ### 6. Tracker che mất nội dung trang?
@@ -220,7 +220,7 @@ Kéo thả hộp tracker bằng cách giữ chuột vào tiêu đề (nếu hỗ
 ## 📝 Ghi chú kỹ thuật
 
 - **Ngôn ngữ:** JavaScript thuần (ES6+).
-- **Lưu trữ:** `localStorage` với key `master-tracking-hcmus`.
+- **Lưu trữ:** `localStorage` với key `hcmus_master_tracker_v2`.
 - **Không gửi dữ liệu ra ngoài** — mọi thứ chạy local trong trình duyệt.
 - **Tương thích:** Chrome 90+, Edge 90+, Firefox 88+, Safari 14+.
 - **Cấu trúc dữ liệu:**
